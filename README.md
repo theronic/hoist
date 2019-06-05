@@ -2,7 +2,7 @@
 
 # Hoist
 
-Hoist is a visual programming language with a strong concept of symbolic origin. Hoist is inspired by Excel and reversible datalog. The term 'hoist' comes from pulling hard-coded values 'up' out of a chunk of code and replacing them with abstract symbols that make the code reusable, parameterisable.
+Hoist is a visual programming language with a strong concept of symbolic origin. Hoist is inspired by Excel and reversible datalog. The term 'hoist' comes from pulling hard-coded values 'up' out of a chunk of code and replacing them with abstract symbols that makes the code reusable, parameterisable.
 
 Something as simple as this:
 
@@ -11,6 +11,7 @@ Something as simple as this:
   (carmine/get "my_key"))
 ```
 
+Let's hoist up the hard-coded Redis URL:
 
 ```clojure
 (let [env-map   (->> (slurp "config.edn") (clojure.edn/read-string))
